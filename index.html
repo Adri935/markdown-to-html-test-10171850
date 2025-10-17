@@ -12,9 +12,14 @@
 <body>
   <main>
     <h1>Markdown to HTML Converter</h1>
+    <div id="markdown-tabs">
+      <button id="tab-html" class="active">Rendered HTML</button>
+      <button id="tab-source">Markdown Source</button>
+    </div>
     <div id="markdown-output">
       <p>Loading content...</p>
     </div>
+    <div id="markdown-source" style="display: none;"></div>
   </main>
   <script src="script.js"></script>
 </body>
