@@ -9,13 +9,13 @@ This project converts Markdown input to HTML using the Marked.js library and ren
 
 ## Usage
 
-The application automatically processes the provided Markdown file and displays the rendered HTML.
+The application automatically processes the provided Markdown file and displays the rendered HTML. Use the tabs to switch between the rendered view and the source Markdown.
 
 ## Code Explanation
 
-- `index.html`: Main HTML structure with container for Markdown output
-- `style.css`: Basic styling for the page
-- `script.js`: JavaScript logic for processing Markdown and rendering HTML
+- `index.html`: Main HTML structure with tabs and containers for Markdown output and source
+- `style.css`: Basic styling for the page including tab styles
+- `script.js`: JavaScript logic for processing Markdown, rendering HTML, and handling tab switching
 
 ## License
 MIT
