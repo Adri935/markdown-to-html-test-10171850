@@ -20,8 +20,37 @@ h1 {
   padding-bottom: 10px;
 }
 
-#markdown-output {
+#markdown-tabs {
+  margin: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#markdown-tabs button {
+  background: none;
+  border: 1px solid transparent;
+  border-bottom: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: -1px;
+  border-radius: 5px 5px 0 0;
+}
+
+#markdown-tabs button.active {
+  border-color: #ddd;
+  border-bottom-color: white;
+  background-color: white;
+  font-weight: bold;
+}
+
+#markdown-output, #markdown-source {
   margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 0 5px 5px 5px;
+  min-height: 200px;
+  white-space: pre-wrap;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  background-color: #f9f9f9;
 }
 
 #markdown-output h1,
