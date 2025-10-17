@@ -63,6 +63,32 @@ async function processAttachment(url) {
   }
 }
 
+// Tab switching functionality
+function setupTabs(markdownText) {
+  const htmlTab = document.getElementById('tab-html');
+  const sourceTab = document.getElementById('tab-source');
+  const outputElement = document.getElementById('markdown-output');
+  const sourceElement = document.getElementById('markdown-source');
+  
+  // Show the markdown source in the source tab
+  sourceElement.textContent = markdownText;
+  
+  // Add event listeners for tab switching
+  htmlTab.addEventListener('click', () => {
+    htmlTab.classList.add('active');
+    sourceTab.classList.remove('active');
+    outputElement.style.display = 'block';
+    sourceElement.style.display = 'none';
+  });
+  
+  sourceTab.addEventListener('click', () => {
+    sourceTab.classList.add('active');
+    htmlTab.classList.remove('active');
+    sourceElement.style.display = 'block';
+    outputElement.style.display = 'none';
+  });
+}
+
 // Main function to convert markdown to HTML
 async function convertMarkdown() {
   const outputElement = document.getElementById('markdown-output');
@@ -106,6 +132,9 @@ async function convertMarkdown() {
     
     // Render in the output element
     outputElement.innerHTML = htmlContent;
+    
+    // Setup tab switching
+    setupTabs(markdownText);
   } catch (error) {
     console.error('Error converting markdown:', error);
     outputElement.innerHTML = `<p class="error">Error: ${error.message}</p>`;
